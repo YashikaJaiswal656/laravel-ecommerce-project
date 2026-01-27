@@ -11,6 +11,8 @@
     align-items: center;
     background-color: #f7f7f7;
     border-bottom: 3px dotted #eee;
+    position: fixed;
+    top: 0;
 }
 .container{
     height: 100%;
