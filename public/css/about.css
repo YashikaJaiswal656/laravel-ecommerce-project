@@ -1,0 +1,65 @@
+.container-bg{
+    height: 400px;
+    margin-top: 130px;
+    width: 100%;
+    background-image: url('https://themewagon.github.io/hexashop/assets/images/about-us-page-heading.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-bg h1{
+    font-size: 52px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.container-bg p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-style: italic;
+}
+.container-bg .content{
+    text-align: center;
+}
+.explore-one{
+    margin-right: 0px;
+    margin-left: 50px;
+}
+
+.explore-one h2{
+font-size: 34px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+.explore-one p{
+    font-size: 14px;
+margin: 15px 0px 15px 0px;
+    color: #aaaaaa;
+    font-weight: 500;
+    display: block;
+    margin-top: 25px;
+}
+.explore-one span{
+    
+margin: 15px 0px 15px 0px;
+font-style: italic;
+    color: #2a2a2a;
+    font-weight: 500;
+}
+.explore-two img{ 
+height: 400px;
+width: 500px;
+background-size: cover;
+}
+.dottedd{
+    border-bottom: 3px dotted #eee;
+}
+.icons .icon{
+    margin: 10px;
+    border-radius: 50%;
+}
+.icons{
+    display: flex;
+}
