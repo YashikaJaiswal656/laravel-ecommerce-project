@@ -1,0 +1,28 @@
+.container-bg{
+    height: 400px;
+    margin-top: 130px;
+    width: 100%;
+    background-image: url('https://themewagon.github.io/hexashop/assets/images/products-page-heading.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-bg h1{
+    font-size: 52px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.container-bg p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    font-style: italic;
+}
+.container-bg .content{
+    text-align: center;
+}
+.head{
+    text-align: center;
+}
