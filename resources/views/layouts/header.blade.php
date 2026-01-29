@@ -3,11 +3,10 @@
             <div class="container">
                 <img src="https://themewagon.github.io/hexashop/assets/images/logo.png" alt="">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Products</li>
-                    <li>Explore</li>
-                    <li>Contact</li>
+                    <li><a href="{{route('home')}}">Home</a> </li>
+                    <li> <a href="{{route('about')}}">About Us</a></li>
+                    <li> <a href="{{route('product')}}">Products</a></li>
+                    <li> <a href="{{route('contact')}}">Contact</a></li>
                 </ul>
       
     
@@ -18,10 +17,10 @@
     </header>
     <div class="side_bar">
                     <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Products</li>
-                    <li>Explore</li>
-                    <li>Contact</li>
+                   
+                    <li><a href="{{route('home')}}">Home</a> </li>
+                    <li> <a href="{{route('about')}}">About Us</a></li>
+                    <li> <a href="{{route('product')}}">Products</a></li>
+                    <li> <a href="{{route('contact')}}">Contact</a></li>
                 </ul>
 </div>
