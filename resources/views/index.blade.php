@@ -2,6 +2,7 @@
 @section('title','home')
 @section('content')
 <div class="container_bg">
+  <div class="container-small">
   <div class="cat_one">
     <div class="blur">
       <div class="content">
@@ -33,6 +34,7 @@
         <p>Best Trend Accessories</p>
       </div>
     </div>
+  </div>
   </div>
 </div>
 <div class="dotted"></div>
