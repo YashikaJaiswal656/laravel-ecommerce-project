@@ -39,27 +39,28 @@
     <p>Fill the form to insert the product </p>
 </div>
     <div class="container_form">
-       <form action="{{route('create')}}" method="POST">
+       <form action="{{route('update',$addproduct->id)}}" method="POST">
         @csrf
+        @method('PUT')
         <div class="form_label">
             <label for="">Name</label>
-            <input type="text" name="name" placeholder="Enter the product name">
+            <input type="text" name="name" value="{{$addproduct->name}}" placeholder="Enter the product name">
         </div>
         <div class="form_label">
             <label for="">Categories</label>
-           <input type="text" name="cat" placeholder="Enter the product categories">
+           <input type="text" name="cat" value="{{$addproduct->cat}}" placeholder="Enter the product categories">
         </div>
         <div class="form_label">
             <label for="">Amount</label>   
-            <input type="number" name="amount" placeholder="Enter the amount of product">
+            <input type="number" name="amount" value="{{$addproduct->amount}}" placeholder="Enter the amount of product">
         </div>
         <div class="form_label">
             <label for="">Description</label>
-            <input type="text" name="description" placeholder="enter the short description">
+            <input type="text" name="description" value="{{$addproduct->description}}" placeholder="enter the short description">
         </div>
         <div class="form_label">
             <label for="">Details</label>
-            <input type="text" name="detail" placeholder="enter he details of product">
+            <input type="text" name="detail" value="{{$addproduct->detail}}" placeholder="enter he details of product">
         </div>
         <div class="form_label">
             <label for="">Upload images</label>
