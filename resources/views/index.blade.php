@@ -1,4 +1,5 @@
-@extends('layouts.app')
+<x-app-layout>
+
 @section('title','home')
 @section('content')
 <div class="container_bg">
@@ -255,4 +256,4 @@
         </div>
       </div>
     </div>
-@endsection
+  </x-app-layout>
