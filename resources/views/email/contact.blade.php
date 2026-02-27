@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<x-app-layout>
 @section('title','contact')
 @section('content')
 <link rel="stylesheet" href="{{asset('css/contact.css')}}">
@@ -25,12 +25,16 @@
             </h2>
             <p>Details to details is what makes Hexashop different from the other themes.
             </p>
+            <form action="{{route('contact_send')}}" method="post">
+                @csrf
             <div class="input">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email Address">
+                <input type="text" placeholder="Your Name"name="name">
+                <input type="email" placeholder="Your Email Address" name="email">
             </div>
-            <textarea name="" id="" cols="71" rows="10" placeholder="Your message"></textarea>
-                <div class="icon"><i class="fa-solid fa-paper-plane"></i></div>
+            <textarea id="" cols="71" rows="10" placeholder="Your message" name="message"></textarea>
+            <br>
+        <button>submit</button>
+            </form>
         </div>
     </div>
 </div>
@@ -80,4 +84,5 @@
         </div>
     </div>
 </div>
-@endsection
+
+</x-app-layout>

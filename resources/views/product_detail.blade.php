@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<x-app-layout>
 @section('title','product detail')
 @section('content')
 <link rel="stylesheet" href="{{asset('css/details.css')}}">
@@ -38,4 +38,4 @@
     </div>
 
 
-@endsection
+  </x-app-layout>

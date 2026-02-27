@@ -16,7 +16,7 @@ class HomeController extends Controller
         return view('product');
     }
     public function contact(){
-        return view('contact');
+        return view('email.contact');
     }
     public function product_detail(){
         return view('product_detail');

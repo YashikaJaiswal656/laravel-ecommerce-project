@@ -14,10 +14,14 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        
+        <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+        
+        <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
+            
 
             <!-- Page Heading -->
             @isset($header)
@@ -27,11 +31,12 @@
                     </div>
                 </header>
             @endisset
-
+@include('layouts.header')
             <!-- Page Content -->
             <main>
                 {{ $slot }}
             </main>
+            @include('layouts.footer')
         </div>
     </body>
 </html>
