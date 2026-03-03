@@ -96,8 +96,9 @@ p{
     margin-bottom: 30px;
 }
 .img_cont{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 350px 1fr 1fr;
+    justify-items: end;
 }
 .img_coll h4{
     font-size: 22px;

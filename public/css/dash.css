@@ -103,6 +103,12 @@ input{
     margin: 10px 10px 10px 0px;
     border: 1px solid grey;
 }
+select{
+    height: 46px;
+    width: 572px;
+    margin: 10px 10px 10px 0px;
+    border: 1px solid grey;
+}
 label{
     color: #2e2b28;
     font-size: 16px;
@@ -155,6 +161,7 @@ table,tr,td,th{
     background-color: rgb(16, 109, 231);
     border: 0px;
 }
+
 @media screen and (max-width:780px) {
     .nav .container ul{
         display: none;

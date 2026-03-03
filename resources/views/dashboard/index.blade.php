@@ -15,39 +15,37 @@
                 <ul>
                     <li><a href="{{route('Add_product')}}">Create</a> </li>
                     <li> <a href="{{route('view')}}">View Products</a></li>
+                    <li> <a href="{{route('cat')}}">Create categories</a></li>
                   
                 </ul>
-      
-    
-                        <div class="hide"> <i class="fa fa-bars menu_icon " onclick="icon()"></i></div>
-
-            </div>
+                        </div>
         </div>
     </header>
-    <div class="side_bar">
-                    <ul>
-                   
-                    <li><a href="{{route('home')}}">Home</a> </li>
-                    <li> <a href="{{route('about')}}">About Us</a></li>
-                    <li> <a href="{{route('product')}}">Products</a></li>
-                    <li> <a href="{{route('contact')}}">Contact</a></li>
-                </ul>
-</div>
 
 <div class="heading">
     <h1>Add product</h1>
     <p>Fill the form to insert the product </p>
 </div>
     <div class="container_form">
-       <form action="{{route('create')}}" method="POST">
+       <form action="{{route('create')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form_label">
             <label for="">Name</label>
             <input type="text" name="name" placeholder="Enter the product name">
         </div>
         <div class="form_label">
-            <label for="">Categories</label>
-           <input type="text" name="cat" placeholder="Enter the product categories">
+           
+            <label for="" class="form-label">Categories</label>
+            <select
+                class="form-select form-select-lg"
+                name="cat"
+                id=""
+            >
+                <option selected>Select one</option>
+                @foreach ($addcat as $addcat )
+                <option value="{{$addcat->slug}}">{{$addcat->cat}}</option>
+                @endforeach
+            </select>
         </div>
         <div class="form_label">
             <label for="">Amount</label>   

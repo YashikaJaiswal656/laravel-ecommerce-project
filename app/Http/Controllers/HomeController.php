@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +13,8 @@ class HomeController extends Controller
         return view('About');
     }
     public function product(){
-        return view('product');
+        $showproducts=Product::all();
+        return view('product',compact('showproducts'));
     }
     public function contact(){
         return view('email.contact');

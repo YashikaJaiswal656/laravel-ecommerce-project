@@ -15,25 +15,11 @@
                 <ul>
                     <li><a href="{{route('home')}}">Home</a> </li>
                     <li> <a href="{{route('about')}}">View Products</a></li>
-                  
+                  <li> <a href="{{route('cat')}}">Create categories</a></li>
                 </ul>
-      
-    
-                        <div class="hide"> <i class="fa fa-bars menu_icon " onclick="icon()"></i></div>
-
-            </div>
+      </div>
         </div>
     </header>
-    <div class="side_bar">
-                    <ul>
-                   
-                    <li><a href="{{route('Add_product')}}">Home</a> </li>
-                    <li> <a href="{{route('view')}}">About Us</a></li>
-                    <li> <a href="{{route('product')}}">Products</a></li>
-                        <li> <a href="{{route('contact')}}">Contact</a></li>
-                </ul>
-</div>
-
 <div class="heading">
     <h1>View product</h1>
 </div>

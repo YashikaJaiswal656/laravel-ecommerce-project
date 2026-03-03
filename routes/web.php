@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\HomeController;
-use App\http\Controllers\ProductController;
-use App\http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ContactController;
 
 
 Route::get('/dashboard', function () {
@@ -27,6 +27,8 @@ route::get('view',[ProductController::class,'view'])->name('view');
 route::get('delete/{id}',[ProductController::class,'delete'])->name('delete');
 route::get('edit/{id}',[ProductController::class,'edit'])->name('edit');
 route::put('update/{id}',[ProductController::class,'update'])->name('update');
+route::get('cat',[ProductController::class,'cat'])->name('cat');
+route::post('create_cat',[ProductController::class,'create_cat'])->name('create_cat');
 route::post('contact_send',[ContactController::class,'sendmail'])->name('contact_send');
 
 require __DIR__.'/auth.php';

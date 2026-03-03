@@ -19,82 +19,20 @@
             <p>Check out all of our products.</p>
         </div>
         <div class="img_cont">
+            @foreach ($showproducts as $showproduct )
+                
+            
             <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/men-01.jpg" alt="">
+                <img src="{{asset('images/'.$showproduct->file)}}" alt="">
                 <div class="header_icon">
-                    <h4>Classic Spring</h4>
+                    <h4>{{$showproduct->name}}</h4>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
-                <p>₹1200</p>
+                <p> ₹{{$showproduct->amount}}</p>
             </div>
-            <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/men-02.jpg" alt="">
-                <div class="header_icon">
-                    <h4>Air Force </h4>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p>₹1500</p>
-            </div>
-            <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/men-03.jpg" alt="">
-                <div class="header_icon">
-                    <h4>Love nanaa</h4>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p>₹1800</p>
-            </div>
-        </div>
-        <div class="img_cont">
-            <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/women-01.jpg" alt="">
-                <div class="header_icon">
-                    <h4>Classic Spring</h4>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p>₹1200</p>
-            </div>
-            <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/women-02.jpg" alt="">
-                <div class="header_icon">
-                    <h4>Air Force </h4>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p>₹1500</p>
-            </div>
-            <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/women-03.jpg" alt="">
-                <div class="header_icon">
-                    <h4>Love nanaa</h4>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p>₹1800</p>
-            </div>
-        </div>
-        <div class="img_cont">
-            <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/kid-01.jpg" alt="">
-                <div class="header_icon">
-                    <h4>Classic Spring</h4>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p>₹1200</p>
-            </div>
-            <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/kid-02.jpg" alt="">
-                <div class="header_icon">
-                    <h4>Air Force </h4>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p>₹1500</p>
-            </div>
-            <div class="img_coll">
-                <img src="https://themewagon.github.io/hexashop/assets/images/kid-03.jpg" alt="">
-                <div class="header_icon">
-                    <h4>Love nanaa</h4>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p>₹1800</p>
-            </div>
+            @endforeach
+            
+           
         </div>
     </div>
 </div>

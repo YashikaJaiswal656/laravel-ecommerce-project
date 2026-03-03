@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 use App\Models\product;
 use Illuminate\Http\Request;
-
+use App\Models\Cat;
 class ProductController extends Controller
 {
     public function Add_product(){
-     return view('dashboard.index');
+        $addcat=Cat::all();
+     return view('dashboard.index',compact('addcat'));
     }
     public function create(Request $request){
         $validated =$request->validate([
@@ -18,13 +19,15 @@ class ProductController extends Controller
          'detail'=> 'required',
          'file'=>'required'
         ]);
+        $imageName= time() . '.' . $request->file->extension();
+        $request->file->move(public_path('images'),$imageName);
         $addproduct =new product();
         $addproduct->name=$validated['name'];
         $addproduct->cat=$validated['cat'];
         $addproduct->amount=$validated['amount'];
         $addproduct->description=$validated['description'];
         $addproduct->detail=$validated['detail'];
-        $addproduct->file=$validated['file'];
+        $addproduct->file=$imageName ;
         $addproduct-> save();
         return back()->with('sucess, insterted ');
     }
@@ -61,4 +64,19 @@ class ProductController extends Controller
         return redirect()->route('view')->with('success','Updated successfully');
 
     }
+    public function cat(){
+        return view('dashboard.cat');
+    }
+    public function create_cat(Request $request){
+    $Validated=$request->validate([
+       'cat'=>'required',
+       'slug'=>'required'
+    ]);
+    $addcat=new Cat();
+    $addcat->cat=$Validated['cat'];
+    $addcat->slug=$Validated['slug'];
+    $addcat->save();
+    return back()->with('suc','suc');
+    }
+    
 }
