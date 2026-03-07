@@ -21,7 +21,7 @@
         <div class="img_cont">
             @foreach ($showproducts as $showproduct )
                 
-            
+            <a href="{{route('product_detail',$showproduct->id)}}">
             <div class="img_coll">
                 <img src="{{asset('images/'.$showproduct->file)}}" alt="">
                 <div class="header_icon">
@@ -29,7 +29,7 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
                 <p> ₹{{$showproduct->amount}}</p>
-            </div>
+            </div></a>
             @endforeach
             
            

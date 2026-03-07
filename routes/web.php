@@ -20,7 +20,7 @@ route::get('/',[HomeController::class,'home'])->name('home');
 route::get('/about',[HomeController::class,'about'])->name('about');
 route::get('/product',[HomeController::class,'product'])->name('product');
 route::get('contact',[HomeController::class,'contact'])->name('contact');
-route::get('product_detail',[HomeController::class,'product_detail'])->name('product_detail')->middleware(['auth']);
+route::get('product_detail/{id}',[HomeController::class,'product_detail'])->name('product_detail')->middleware(['auth']);
 route::get('Add_product',[ProductController::class,'Add_product'])->name('Add_product');
 route::post('create',[ProductController::class,'create'])->name('create');
 route::get('view',[ProductController::class,'view'])->name('view');

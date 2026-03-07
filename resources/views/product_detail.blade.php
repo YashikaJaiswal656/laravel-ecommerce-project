@@ -12,19 +12,21 @@
 </div>
 <div class="dotted"></div>
     <div class="collection">
+
       <div class="cont_coll_two">
         <div class="explore-two">
-         <img src="https://themewagon.github.io/hexashop/assets/images/single-product-01.jpg" alt="">
+         <img src="{{asset('images/'.$show_product->file)}}" alt="">
         </div>
         <div class="explore-one">
           <h2>
-            New Green Jacket
+            {{$show_product->name}}
           </h2>
-          <p>$75.00</p>
+          <p>{{$show_product->amount}}</p>
           <div class="dottedd"></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.
+          <p>
+            {{$show_product->detail}}
           </p>
-          <span> <i class="fa fa-quote-left"></i> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod. </span>
+          <span> <i class="fa fa-quote-left"></i> <br> {{$show_product->description}}</span>
           
           <div class="dottedd"></div>
           <div class="icons">
@@ -35,6 +37,7 @@
         </div>
         
       </div>
+      
     </div>
 
 

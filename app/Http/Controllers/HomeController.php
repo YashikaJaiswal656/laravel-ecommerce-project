@@ -19,7 +19,8 @@ class HomeController extends Controller
     public function contact(){
         return view('email.contact');
     }
-    public function product_detail(){
-        return view('product_detail');
+    public function product_detail($id){
+        $show_product=Product::findorfail($id);
+        return view('product_detail',compact('show_product'));
     }
 }
