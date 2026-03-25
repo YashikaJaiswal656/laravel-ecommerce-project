@@ -15,6 +15,8 @@
                 <ul>
                     <li><a href="{{route('Add_product')}}">Create</a> </li>
                     <li> <a href="{{route('view')}}">View Products</a></li>
+                  <li><a href="{{route('roles')}}">Roles Permission</a></li>
+
                   
                 </ul>
       

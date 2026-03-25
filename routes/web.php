@@ -30,5 +30,5 @@ route::put('update/{id}',[ProductController::class,'update'])->name('update');
 route::get('cat',[ProductController::class,'cat'])->name('cat');
 route::post('create_cat',[ProductController::class,'create_cat'])->name('create_cat');
 route::post('contact_send',[ContactController::class,'sendmail'])->name('contact_send');
-
+route::get('roles',[ProductController::class,'roles'])->name('roles');
 require __DIR__.'/auth.php';

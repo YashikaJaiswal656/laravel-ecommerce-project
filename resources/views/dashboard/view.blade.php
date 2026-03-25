@@ -16,6 +16,7 @@
                     <li><a href="{{route('home')}}">Home</a> </li>
                     <li> <a href="{{route('about')}}">View Products</a></li>
                   <li> <a href="{{route('cat')}}">Create categories</a></li>
+                  <li><a href="{{route('roles')}}">Roles Permission</a></li>
                 </ul>
       </div>
         </div>

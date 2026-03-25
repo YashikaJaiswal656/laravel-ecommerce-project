@@ -78,5 +78,7 @@ class ProductController extends Controller
     $addcat->save();
     return back()->with('suc','suc');
     }
-    
+    public function roles(){
+        return view('dashboard.roles');
+    }
 }
