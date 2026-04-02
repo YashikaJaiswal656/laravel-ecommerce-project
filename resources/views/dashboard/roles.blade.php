@@ -29,7 +29,7 @@
     <p>Fill the form to insert the product </p>
 </div>
     <div class="container_form">
-       <form  method="POST" >
+       <form  method="POST" action="{{route('role_insert')}}">
         @csrf
         <div class="form_label">
             <label for="">Name</label>
@@ -51,21 +51,21 @@
         <div class="form_label">
             <label for="">Permission</label>
             <div class="label">
-            <input type="checkbox" name="permission" value="create_cat" id="">
+            <input type="checkbox" name="permission[]" value="create_cat" id="">
                 <label for="">Create Category</label>
             </div>
             <div class="label">
-            <input type="checkbox" name="permission" value="insert_product" id="">
+            <input type="checkbox" name="permission[]" value="insert_product" id="">
                 <label for="">Insert Product</label>
             </div>
             <div class="label">
                 
-            <input type="checkbox" name="permission" value="edit_roles" id="">
+            <input type="checkbox" name="permission[]" value="edit_roles" id="">
                 <label for="">Roles permission insert</label>              
             </div>
             <div class="label">
                 
-            <input type="checkbox" name="permission" value="update">
+            <input type="checkbox" name="permission[]" value="update">
                 <label for="">Update/Delete product</label>
             </div>
         </div>

@@ -31,4 +31,6 @@ route::get('cat',[ProductController::class,'cat'])->name('cat');
 route::post('create_cat',[ProductController::class,'create_cat'])->name('create_cat');
 route::post('contact_send',[ContactController::class,'sendmail'])->name('contact_send');
 route::get('roles',[ProductController::class,'roles'])->name('roles');
+route::post('role_insert',[ProductController::class,'role_insert'])->name('role_insert');
+route::get('role_view',[ProductController::class,'role_view'])->name('role_view');
 require __DIR__.'/auth.php';

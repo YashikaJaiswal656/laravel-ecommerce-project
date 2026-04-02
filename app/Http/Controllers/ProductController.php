@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\product;
 use Illuminate\Http\Request;
 use App\Models\Cat;
+use App\Models\role;
 class ProductController extends Controller
 {
     public function Add_product(){
@@ -80,5 +81,24 @@ class ProductController extends Controller
     }
     public function roles(){
         return view('dashboard.roles');
+    }
+    public function role_insert(Request $request){
+$Validated=$request->validate([
+'name'=>'required',
+'email'=>'required',
+'role'=>'required',
+'permission'=>'required|array'
+]);
+$addrole=new role();
+$addrole->name=$Validated['name'];
+$addrole->email=$Validated['email'];
+$addrole->role=$Validated['role'];
+$addrole->permission=json_encode($Validated['permission']);
+$addrole->save();
+return back()->with('suc','suc');
+    }
+    public function role_view(){
+        $view_role=role::all();
+        return view('dashboard.view_role',compact('view_role'));
     }
 }
